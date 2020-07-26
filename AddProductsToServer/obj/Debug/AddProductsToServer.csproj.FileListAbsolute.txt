@@ -1,0 +1,29 @@
+E:\MyProjects and Tests\Sasha projs\LiniaOkonAddProducts\AddProductsToServer\obj\Debug\AddProductsToServer.csprojAssemblyReference.cache
+E:\MyProjects and Tests\Sasha projs\LiniaOkonAddProducts\AddProductsToServer\obj\Debug\AddProductsToServer.csproj.CoreCompileInputs.cache
+E:\MyProjects and Tests\Sasha projs\LiniaOkonAddProducts\AddProductsToServer\bin\Debug\AddProductsToServer.exe.config
+E:\MyProjects and Tests\Sasha projs\LiniaOkonAddProducts\AddProductsToServer\bin\Debug\AddProductsToServer.exe
+E:\MyProjects and Tests\Sasha projs\LiniaOkonAddProducts\AddProductsToServer\bin\Debug\AddProductsToServer.pdb
+E:\MyProjects and Tests\Sasha projs\LiniaOkonAddProducts\AddProductsToServer\bin\Debug\Newtonsoft.Json.dll
+E:\MyProjects and Tests\Sasha projs\LiniaOkonAddProducts\AddProductsToServer\bin\Debug\Newtonsoft.Json.xml
+E:\MyProjects and Tests\Sasha projs\LiniaOkonAddProducts\AddProductsToServer\obj\Debug\AddProductsToServer.csproj.CopyComplete
+E:\MyProjects and Tests\Sasha projs\LiniaOkonAddProducts\AddProductsToServer\obj\Debug\AddProductsToServer.exe
+E:\MyProjects and Tests\Sasha projs\LiniaOkonAddProducts\AddProductsToServer\obj\Debug\AddProductsToServer.pdb
+C:\Work\Projects\LiniaOkonAddProducts\AddProductsToServer\bin\Debug\AddProductsToServer.exe.config
+C:\Work\Projects\LiniaOkonAddProducts\AddProductsToServer\bin\Debug\AddProductsToServer.exe
+C:\Work\Projects\LiniaOkonAddProducts\AddProductsToServer\bin\Debug\AddProductsToServer.pdb
+C:\Work\Projects\LiniaOkonAddProducts\AddProductsToServer\bin\Debug\Newtonsoft.Json.dll
+C:\Work\Projects\LiniaOkonAddProducts\AddProductsToServer\bin\Debug\Newtonsoft.Json.xml
+C:\Work\Projects\LiniaOkonAddProducts\AddProductsToServer\obj\Debug\AddProductsToServer.csprojAssemblyReference.cache
+C:\Work\Projects\LiniaOkonAddProducts\AddProductsToServer\obj\Debug\AddProductsToServer.csproj.CopyComplete
+C:\Work\Projects\LiniaOkonAddProducts\AddProductsToServer\obj\Debug\AddProductsToServer.exe
+C:\Work\Projects\LiniaOkonAddProducts\AddProductsToServer\obj\Debug\AddProductsToServer.pdb
+C:\Users\elyko\OneDrive\Рабочий стол\LiniaOkonAddProducts\AddProductsToServer\bin\Debug\AddProductsToServer.exe.config
+C:\Users\elyko\OneDrive\Рабочий стол\LiniaOkonAddProducts\AddProductsToServer\bin\Debug\AddProductsToServer.exe
+C:\Users\elyko\OneDrive\Рабочий стол\LiniaOkonAddProducts\AddProductsToServer\bin\Debug\AddProductsToServer.pdb
+C:\Users\elyko\OneDrive\Рабочий стол\LiniaOkonAddProducts\AddProductsToServer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\elyko\OneDrive\Рабочий стол\LiniaOkonAddProducts\AddProductsToServer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\elyko\OneDrive\Рабочий стол\LiniaOkonAddProducts\AddProductsToServer\obj\Debug\AddProductsToServer.csprojAssemblyReference.cache
+C:\Users\elyko\OneDrive\Рабочий стол\LiniaOkonAddProducts\AddProductsToServer\obj\Debug\AddProductsToServer.csproj.CoreCompileInputs.cache
+C:\Users\elyko\OneDrive\Рабочий стол\LiniaOkonAddProducts\AddProductsToServer\obj\Debug\AddProductsToServer.csproj.CopyComplete
+C:\Users\elyko\OneDrive\Рабочий стол\LiniaOkonAddProducts\AddProductsToServer\obj\Debug\AddProductsToServer.exe
+C:\Users\elyko\OneDrive\Рабочий стол\LiniaOkonAddProducts\AddProductsToServer\obj\Debug\AddProductsToServer.pdb
