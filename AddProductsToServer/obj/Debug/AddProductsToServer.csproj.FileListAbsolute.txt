@@ -27,3 +27,13 @@ C:\Users\elyko\OneDrive\Рабочий стол\LiniaOkonAddProducts\AddProducts
 C:\Users\elyko\OneDrive\Рабочий стол\LiniaOkonAddProducts\AddProductsToServer\obj\Debug\AddProductsToServer.csproj.CopyComplete
 C:\Users\elyko\OneDrive\Рабочий стол\LiniaOkonAddProducts\AddProductsToServer\obj\Debug\AddProductsToServer.exe
 C:\Users\elyko\OneDrive\Рабочий стол\LiniaOkonAddProducts\AddProductsToServer\obj\Debug\AddProductsToServer.pdb
+E:\My data\My Projects\Sasha projs\LiniaVikon\AddProductsToServer\bin\Debug\AddProductsToServer.exe.config
+E:\My data\My Projects\Sasha projs\LiniaVikon\AddProductsToServer\bin\Debug\AddProductsToServer.exe
+E:\My data\My Projects\Sasha projs\LiniaVikon\AddProductsToServer\bin\Debug\AddProductsToServer.pdb
+E:\My data\My Projects\Sasha projs\LiniaVikon\AddProductsToServer\bin\Debug\Newtonsoft.Json.dll
+E:\My data\My Projects\Sasha projs\LiniaVikon\AddProductsToServer\bin\Debug\Newtonsoft.Json.xml
+E:\My data\My Projects\Sasha projs\LiniaVikon\AddProductsToServer\obj\Debug\AddProductsToServer.csprojAssemblyReference.cache
+E:\My data\My Projects\Sasha projs\LiniaVikon\AddProductsToServer\obj\Debug\AddProductsToServer.csproj.CoreCompileInputs.cache
+E:\My data\My Projects\Sasha projs\LiniaVikon\AddProductsToServer\obj\Debug\AddProductsToServer.csproj.CopyComplete
+E:\My data\My Projects\Sasha projs\LiniaVikon\AddProductsToServer\obj\Debug\AddProductsToServer.exe
+E:\My data\My Projects\Sasha projs\LiniaVikon\AddProductsToServer\obj\Debug\AddProductsToServer.pdb

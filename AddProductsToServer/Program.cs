@@ -14,7 +14,7 @@ namespace AddProductsToServer
         {
             Random rnd = new Random();
 
-            Console.WriteLine("Чтобы не перегрузить сервер, программа будет работать с небольшой задержкой.");
+            //Console.WriteLine("Чтобы не перегрузить сервер, программа будет работать с небольшой задержкой.");
 
             Console.WriteLine("Укажите текущий order. Для этого зайдите на сайт, нажмите кнопку [+товар] и выполните скрипт:");
             Console.WriteLine(@"(function getValueObject() {
@@ -31,7 +31,7 @@ return res
             int count = int.Parse(Console.ReadLine());
 
             // Считать файл
-            JObject dataObject = JObject.Parse(File.ReadAllText("products_eng.json"));
+            JObject dataObject = JObject.Parse(File.ReadAllText("new_json.json"));
 
             ProductModelFile prodFile = dataObject.ToObject<ProductModelFile>();
             // count = prodFile.data.Count;

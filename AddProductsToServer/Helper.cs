@@ -2,6 +2,20 @@
 
 namespace AddProductsToServer
 {
+    enum ProfileSystem
+    {
+        Null,
+        OpenTeckDELUX,
+        RehauEcosol60,
+        RehauEcosol70,
+        RehauGeneo,
+        RehauSynego,
+        SalamanderBluEvolution92,
+        SalamanderStreamline,
+        WDS5,
+        WDS6
+    }
+
     static class Helper
     {
         /// <summary>
@@ -9,7 +23,7 @@ namespace AddProductsToServer
         /// </summary>
         /// <param name="str">construction_type</param>
         /// <returns>value for form</returns>
-        public static string GetWindowType(string str)
+        public static string GetWindowType(string str) // ♥
         {
             switch (str)
             {
@@ -33,7 +47,7 @@ namespace AddProductsToServer
         /// </summary>
         /// <param name="str">double_glazed_window</param>
         /// <returns></returns>
-        public static string GetDoubleGlazedWindow(string str)
+        public static string GetDoubleGlazedWindow(string str) //♥
         {
             switch (str)
             {
@@ -55,18 +69,28 @@ namespace AddProductsToServer
         /// </summary>
         /// <param name="str">profile_system</param>
         /// <returns></returns>
-        public static string GetCoutry(string str)
+        public static string GetCoutry(string str) //♥
         {
-            string producer = str.Split(' ')[0];
-            switch (producer)
+            switch (str)
             {
-                case "Open-Teck": // Украина
+                case "Украина": // 
                     return "26";
-                case "Rehau": // Германия
+                case "Германия": // 
                     return "5";
                 default:
                     return "";
             }
+
+            //string producer = str.Split(' ')[0];
+            //switch (producer)
+            //{
+            //    case "Open-Teck": // Украина
+            //        return "26";
+            //    case "Rehau": // Германия
+            //        return "5";
+            //    default:
+            //        return "";
+            //}
         }
 
         /// <summary>
@@ -74,45 +98,105 @@ namespace AddProductsToServer
         /// </summary>
         /// <param name="str">profile_system</param>
         /// <returns></returns>
-        public static string GetProfileChamber(string str)
+        public static string GetProfileChamber(string profile_cameras) //♥
         {
             /*
              3x - 91
              4x - 92
              5 - 93
              */
-
-            switch (str)
+            switch (profile_cameras)
             {
-                case "Open-Teck DE-LUX": // 4 60
-                    return "92";
-                case "Rehau Ecosol 60": // 3 60
+                case "3":
                     return "91";
-                case "Rehau Ecosol 70": // 5 70
+                case "4":
+                    return "92";
+                case "5":
                     return "93";
+                case "6":
+                    return "106";
+                case "7":
+                    return "107";
+                case "8":
+                    return "105";
                 default:
                     return "";
             }
+
+            //switch (str)
+            //{
+            //    case "Open-Teck DE-LUX": // 4 60
+            //        return "92";
+            //    case "Rehau Ecosol 60": // 3 60
+            //        return "91";
+            //    case "Rehau Ecosol 70": // 5 70
+            //        return "93";
+            //    default:
+            //        return "";
+            //}
         }
 
-        /// <summary>
-        /// Профиль
-        /// </summary>
-        /// <param name="str">profile_system</param>
-        /// <returns></returns>
-        public static string GetProfile(string str)
+        public static ProfileSystem GetProfileSystem(string profile_system, string sub_system)
         {
-            switch (str)
+            switch (profile_system)
             {
-                case "Open-Teck DE-LUX": // OpenTeck
-                    return "10";
-                case "Rehau Ecosol 60": // Rehau
-                    return "8";
-                case "Rehau Ecosol 70": // Rehau
-                    return "8";
-                default:
-                    return "";
+                case "Open-Teck":
+                    {
+                        switch (sub_system)
+                        {
+                            case "DE-LUX":
+                                return ProfileSystem.OpenTeckDELUX;
+                            default:
+                                break;
+                        }
+                        break;
+                    }
+                case "Rehau":
+                    {
+                        switch (sub_system)
+                        {
+                            case "Ecosol 60":
+                                return ProfileSystem.RehauEcosol60;
+                            case "Ecosol 70":
+                                return ProfileSystem.RehauEcosol70;
+                            case "Geneo":
+                                return ProfileSystem.RehauGeneo;
+                            case "Synego":
+                                return ProfileSystem.RehauSynego;
+                            default:
+                                break;
+                        }
+                        break;
+                    }
+                case "Salamander":
+                    {
+                        switch (sub_system)
+                        {
+                            case "BluEvolution 92":
+                                return ProfileSystem.SalamanderBluEvolution92;
+                            case "Streamline":
+                                return ProfileSystem.SalamanderStreamline;
+                            default:
+                                break;
+                        }
+                        break;
+                    }
+                case "WDS":
+                    {
+                        switch (sub_system)
+                        {
+                            case "WDS 5":
+                                return ProfileSystem.WDS5;
+                            case "WDS 6":
+                                return ProfileSystem.WDS6;
+                            default:
+                                break;
+                        }
+                        break;
+                    }
             }
+
+            return ProfileSystem.Null;
         }
 
         /// <summary>
@@ -120,25 +204,67 @@ namespace AddProductsToServer
         /// </summary>
         /// <param name="str">profile_system</param>
         /// <returns></returns>
-        public static string GetSystemProfileDepth(string str)
+        public static string GetSystemProfileDepth(ProfileSystem ps) // ♥
         {
+            /*
+                WDS 5S - 60
+                OpenTeck DE-LUX - 60 
+                Rehau Ecosol 60 - 60
+                Salamander Desing 2D - 60 
+
+                WDS 6S - 70
+                Rehau Ecosol 70 - 70 
+                Rehau Brilliant Desing - 70 
+                OpenTeck ELIT 70 - 70
+                
+                Salamander Streamline - 76
+                Rehau SYNEGO - 80
+                Salamander BluEvolution 92 - 82
+                Rehau GENEO - 86
+             */
+
             /*
                 50 - 29 
                 60 - 48
                 70 - 49
+                76 - 99
+                80 - 111
+                82 - 109
+                86 - 110
              */
 
-            switch (str)
+            switch (ps)
             {
-                case "Open-Teck DE-LUX": // 60
+                case ProfileSystem.WDS5:
+                case ProfileSystem.OpenTeckDELUX:
+                case ProfileSystem.RehauEcosol60:
                     return "48";
-                case "Rehau Ecosol 60": // 3 60
-                    return "48";
-                case "Rehau Ecosol 70": // 5 70
-                    return "48";
+                case ProfileSystem.WDS6:
+                case ProfileSystem.RehauEcosol70:
+                    return "49";
+                case ProfileSystem.SalamanderStreamline:
+                    return "99";
+                case ProfileSystem.RehauSynego:
+                    return "111";
+                case ProfileSystem.SalamanderBluEvolution92:
+                    return "109";
+                case ProfileSystem.RehauGeneo:
+                    return "110";
                 default:
                     return "";
             }
+
+            //switch (str)
+            //{
+            //    case "Open-Teck DE-LUX": // 60
+            //        return "48";
+            //    case "Rehau Ecosol 60": // 3 60
+            //        return "48";
+            //    case "Rehau Ecosol 70": // 5 70
+            //        return "48";
+            //    default:
+            //        return "";
+            //}
         }
 
         /// <summary>
@@ -146,7 +272,7 @@ namespace AddProductsToServer
         /// </summary>
         /// <param name="str">furniture</param>
         /// <returns></returns>
-        public static string GetFurniture(string str)
+        public static string GetFurniture(string str) // ♥
         {
             switch (str)
             {
@@ -154,6 +280,8 @@ namespace AddProductsToServer
                     return "81";
                 case "Maco":
                     return "82";
+                case "Axor K-3":
+                    return "108";
                 default:
                     return "";
             }
@@ -164,55 +292,9 @@ namespace AddProductsToServer
         /// </summary>
         /// <param name="str">active_sashes</param>
         /// <returns></returns>
-        public static string GetNumberOfActiveSashes(string str)
+        public static string GetNumberOfActiveSashes(string str) // ♥
         {
             return $"{int.Parse(str) + 83}";
-        }
-
-        /// <summary>
-        /// Система Rehau
-        /// </summary>
-        /// <param name="str">profile_system</param>
-        /// <returns></returns>
-        public static string GetSystemRehau(string str)
-        {
-            if (str.Contains("Rehau"))
-            {
-                string res = string.Join(" ", str.Split(' ').Skip(1));
-                switch (res)
-                {
-                    case "Ecosol 60":
-                        return "30";
-                    case "Ecosol 70":
-                        return "31";
-                    default:
-                        break;
-                }
-            }
-            return "";
-        }
-
-        /// <summary>
-        /// Система OPEN TECK
-        /// </summary>
-        /// <param name="str">profile_system</param>
-        /// <returns></returns>
-        public static string GetSystemOpenTeck(string str)
-        {
-            if (str.Contains("Open-Teck"))
-            {
-                string res = string.Join(" ", str.Split(' ').Skip(1));
-                switch (res)
-                {
-                    case "DE-LUX":
-                        return "79";
-                    case "ELIT 70":
-                        return "80";
-                    default:
-                        break;
-                }
-            }
-            return "";
         }
 
         /// <summary>
@@ -220,7 +302,7 @@ namespace AddProductsToServer
         /// </summary>
         /// <param name="str">String.Empty</param>
         /// <returns></returns>
-        public static string GetColor(string str)
+        public static string GetColor(string str) // ♥
         {
             return "86"; // Белый
         }
@@ -230,9 +312,9 @@ namespace AddProductsToServer
         /// </summary>
         /// <param name="str">double_glazed_window</param>
         /// <returns></returns>
-        public static string GetPropertiesOfDoubleGlazedWindows(string str)
+        public static string GetPropertiesOfDoubleGlazedWindows(string double_glazed_window) // ♥
         {
-            if (str.Contains("энергосберегающий"))
+            if (double_glazed_window.Contains("энергосберегающий"))
             {
                 return "97";
             }
@@ -254,7 +336,7 @@ namespace AddProductsToServer
         /// </summary>
         /// <param name="height">height</param>
         /// <returns></returns>
-        public static string GetHeight(string height)
+        public static string GetHeight(string height) //♥
         {
             switch (height)
             {
@@ -286,6 +368,109 @@ namespace AddProductsToServer
                     return "46";
                 case "1800":
                     return "47";
+                default:
+                    return "";
+            }
+        }
+
+        /// <summary>
+        /// Профиль
+        /// </summary>
+        /// <param name="ps">profile_system</param>
+        /// <returns></returns>
+        public static string GetProfile(ProfileSystem ps) // ♥
+        {
+            switch (ps)
+            {
+                case ProfileSystem.OpenTeckDELUX: // OpenTeck
+                    return "10";
+                // Rehau
+                case ProfileSystem.RehauEcosol60:
+                case ProfileSystem.RehauEcosol70:
+                case ProfileSystem.RehauGeneo:
+                case ProfileSystem.RehauSynego:
+                    return "8";
+                case ProfileSystem.SalamanderBluEvolution92:
+                case ProfileSystem.SalamanderStreamline:
+                    return "9";
+                case ProfileSystem.WDS5:
+                case ProfileSystem.WDS6:
+                    return "11";
+                default:
+                    return "";
+            }
+        }
+
+        /// <summary>
+        /// Система Rehau
+        /// </summary>
+        /// <param name="ps">profile_system</param>
+        /// <returns></returns>
+        public static string GetSystemRehau(ProfileSystem ps) // ♥
+        {
+            switch (ps)
+            {
+                // Rehau
+                case ProfileSystem.RehauEcosol60:
+                    return "30";
+                case ProfileSystem.RehauEcosol70:
+                    return "31";
+                case ProfileSystem.RehauSynego:
+                    return "33";
+                case ProfileSystem.RehauGeneo:
+                    return "34";
+                default:
+                    return "";
+            }
+        }
+
+        /// <summary>
+        /// Система OPEN TECK
+        /// </summary>
+        /// <param name="ps">profile_system</param>
+        /// <returns></returns>
+        public static string GetSystemOpenTeck(ProfileSystem ps)
+        {
+            switch (ps)
+            {
+                case ProfileSystem.OpenTeckDELUX: // OpenTeck
+                    return "79";
+                default:
+                    return "";
+            }
+        }
+
+        /// <summary>
+        /// Система Salamander
+        /// </summary>
+        /// <param name="ps">ProfileSystem</param>
+        /// <returns></returns>
+        public static string GetSystemSalamander(ProfileSystem ps) // ♥
+        {
+            switch (ps)
+            {
+                case ProfileSystem.SalamanderBluEvolution92:
+                    return "101";
+                case ProfileSystem.SalamanderStreamline:
+                    return "102";
+                default:
+                    return "";
+            }
+        }
+
+        /// <summary>
+        /// Система WDS
+        /// </summary>
+        /// <param name="ps">ProfileSystem</param>
+        /// <returns></returns>
+        public static string GetSystemWDS(ProfileSystem ps) // ♥
+        {
+            switch (ps)
+            {
+                case ProfileSystem.WDS5:
+                    return "104";
+                case ProfileSystem.WDS6:
+                    return "103";
                 default:
                     return "";
             }
